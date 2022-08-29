@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exlopre Countries</title>
+    <!-- font-awsome icons link  -->
+    <script src="https://kit.fontawesome.com/b808e929ae.js" crossorigin="anonymous"></script>
+    <!-- bootstrap link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-dark text-light">
+    <header class="container text-center py-5">
+        <h1>Exlopre <span class="text-warning">Foods</span></h1>
+        <p>Welcome to TheMealDB: An open, crowd-sourced database of Recipes from around the world.<br>
+            We also offer a free JSON API for anyone wanting to use it, with additional features for subscribers.</p>
+    </header>
+    <main>
+        <section class="container">
+            <div class="search-form text-center py-4 bg-danger rounded border-0 mb-3">
+                <input id="search-field" class="w-50 py-2 px-2 border border-warning border-end-0 rounded-start"
+                    type="text" placeholder="Search for a Meal..">
+                <button class="search-btn bg-warning py-2 px-5 fs-6 border border-warning border-start-0 rounded-end"
+                    onclick="searchFoods()">Search</button>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row row-cols-1 row-cols-xl-2 g-4" id="meals-continer"></div>
+                <div class="row"></div>
+            </div>
+        </section>
+
+        <section>
+            <!-- Modal -->
+            <div class="modal bg-dark" id="foodModal" tabindex="-1" aria-labelledby="foodModalLabel"
+                style="--bs-bg-opacity: .5;" aria-hidden="">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content bg-warning text-light">
+                        <div id="food-pop-modal" class="modal-body">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="mt-5 text-center py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Exlopre <span class="text-dark">Foods</span></h3>
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Terms of Service </a></li>
+                            <li><a href="#">Privacy Policy </a></li>
+                            <li><a href="#">Our App</a></li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <p>Copyright © 2023 FY Nila All rights reserved</p>
+                    <!-- footer social links -->
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i><a>
+                        <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+    <!-- js here  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="js/meals.js"></script>
+</body>
+
+</html>
