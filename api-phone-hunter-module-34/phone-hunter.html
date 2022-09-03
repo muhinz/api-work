@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exlopre Countries</title>
+    <title>Phone Hunter</title>
     <!-- font-awsome icons link  -->
     <script src="https://kit.fontawesome.com/b808e929ae.js" crossorigin="anonymous"></script>
     <!-- bootstrap link  -->
@@ -16,33 +16,47 @@
 
 <body class="bg-dark text-light">
     <header class="container text-center py-5">
-        <h1>Exlopre <span class="text-warning">Foods</span></h1>
-        <p>Welcome to TheMealDB: An open, crowd-sourced database of Recipes from around the world.<br>
+        <h1>Phone <span class="text-info">Hunter</span></h1>
+        <p>Welcome to Programing Hero An open, crowd-sourced database of Recipes from around the world.<br>
             We also offer a free JSON API for anyone wanting to use it, with additional features for subscribers.</p>
     </header>
     <main>
         <section class="container">
-            <div class="search-form text-center py-4 bg-danger rounded border-0 mb-4 shadow-lg">
-                <input id="search-field" class="w-50 py-2 px-2 border border-warning border-end-0 rounded-start"
-                    type="text" placeholder="Search for a Meal..">
-                <button class="search-btn bg-warning py-2 px-5 fs-6 border border-warning border-start-0 rounded-end"
-                    onclick="searchFoods()">Search</button>
+            <div class="search-form text-center py-4 text-bg-primary rounded border-0 mb-4 shadow-lg">
+                <input id="search-field" class="w-50 py-2 px-2 border border-info border-end-0 rounded-start"
+                    type="text" placeholder="Search your fav..">
+                <button class="search-btn bg-dark py-2 px-5 fs-6 border border-dark border-start-0 rounded-end text-white"
+                    onclick="searchPhone()">Search</button>
             </div>
         </section>
         <section>
             <div class="container">
-                <div class="row row-cols-1 row-cols-xl-2 g-4" id="meals-continer"></div>
-                <div class="row"></div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="phones-continer">
+                </div>
+                <div class="row">
+                    <div id="show-all" class="col-12 text-center py-5 d-none">
+                        <button class="btn btn-outline-info">Show All</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 py-5">
+                        <h2 id="not-found" class="text-info d-none text-center">Sorry! Phone Not Found.</h2>
+                    </div>
+                </div>
             </div>
         </section>
-
+        <section>
+            <div id="loading" class="py-5 text-center spinner">
+                <img class="loading position-absolute top-50" src="images/load.gif" alt="Loading..">
+            </div>
+        </section>
         <section>
             <!-- Modal -->
-            <div class="modal bg-dark" id="foodModal" tabindex="-1" aria-labelledby="foodModalLabel"
+            <div class="modal bg-dark" id="phoneModal" tabindex="-1" aria-labelledby="phoneModalLabel"
                 style="--bs-bg-opacity: .5;" aria-hidden="">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                    <div class="modal-content bg-warning text-light">
-                        <div id="food-pop-modal" class="modal-body">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content text-dark text-center">
+                        <div id="phone-pop-modal" class="modal-body">
                         </div>
                     </div>
                 </div>
@@ -53,7 +67,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h3>Exlopre <span class="text-warning">Foods</span></h3>
+                    <h3>Phone <span class="text-info">Hunter</span></h3>
                     <div class="footer-nav">
                         <ul>
                             <li><a href="#">Contact Us</a></li>
@@ -80,7 +94,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-    <script src="js/meals.js"></script>
+    <script src="js/phone-hunter.js"></script>
 </body>
 
 </html>

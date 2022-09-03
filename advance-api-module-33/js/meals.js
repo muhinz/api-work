@@ -48,8 +48,8 @@ const modalPopup = mealInner => {
     // console.log(mealInner);
     const foodModalBody = document.getElementById('food-pop-modal');
     foodModalBody.innerHTML =`
-        <div class="card-body">
-            <span class="food-btn-close text-end d-block" role="button" tabindex="0">✖</span>
+        <div class="card-body text-dark">
+            <span class="food-btn-close text-end d-block mb-3" role="button" tabindex="0">✖</span>
             <div class="video-container">
                 <iframe width="420" height="200" src="https://www.youtube.com/embed/${mealInner.strYoutube.slice(32,80)}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
@@ -58,7 +58,7 @@ const modalPopup = mealInner => {
                 <p><span class="fw-bold">Country: </span>${mealInner.strArea}</p>
                 <p><span class="fw-bold">Category: </span>${mealInner.strCategory}</p>
             </div>
-            <p>${mealInner.strInstructions}</p>
+            <p>${mealInner.strInstructions.slice(0, 500)}</p>
         </div>
     `;
     const foodDetailsPop = document.getElementById('foodModal');
@@ -79,5 +79,5 @@ const searchFoods = () =>{
 
 }
 // default list 
-loadMeals('fish');
+loadMeals('a');
 

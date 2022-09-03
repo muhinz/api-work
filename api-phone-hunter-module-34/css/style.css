@@ -9,12 +9,12 @@
 .search-btn {
     margin-left: -20px;
 }
+
 .card-img-top {
     top: 0;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
-
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -39,7 +39,7 @@ footer h3 {
 }
 footer hr {
     margin: 50px 60px;
-    border: 0.5px solid #ffc107;
+    border: 0.5px solid #0DCAF0;
 }
 .footer-nav ul {
     list-style: none;
@@ -54,7 +54,7 @@ footer hr {
     transition: 0.3s;
 }
 .footer-nav ul li a:hover {
-    color: #ffc107;
+    color: #0DCAF0;
 }
 footer p {
     margin: 20px 0;
@@ -62,10 +62,24 @@ footer p {
 .social-icons i {
     font-size: 20px;
     padding: 10px;
-    color: #ffc107;
+    color: #0DCAF0;
     margin: 6px;
     transition: 0.3s;
 }
 .social-icons i:hover {
     color: #ef2424;
+}
+.spinner {
+    background-color: #0DCAF05f;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: fixed;
+}
+.loading {
+    width: 50px;
+}
+
+.card-img-modal {
+    width: 200px;
 }
